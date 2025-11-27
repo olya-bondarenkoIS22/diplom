@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина - Антикварный магазинчик</title>
+    <link rel="stylesheet" href="style\shared.css">
+    <link rel="stylesheet" href="style\cart.css">
+    <link rel="stylesheet" href="style\header.css">
+    <link rel="stylesheet" href="style\menu.css">
+    <link rel="stylesheet" href="style\footer.css">
+    <!-- <link rel="stylesheet" href="cart.css"> -->
+    <link rel="icon" href="images/logo_2.png" type="image/png">
+</head>
+<body>
+    <!-- Затемнение фона при открытом меню -->
+    <div class="overlay" id="overlay"></div>
+
+    <header class="header">
+        <div class="header-content">
+            <div class="header-left">
+                <img src="images/logo.png" alt="Логотип Archivirus" class="logo">
+            </div>
+            <div class="header-right">
+                <div class="header-icons">
+                    <div class="icon-item">
+                        <a href="menu.html" class="icon-link">
+                            <img src="images/image_menu_return.png" alt="Вернуться" class="avatar">
+                            <div class="icon-text">Вернуться</div>
+                        </a>
+                    </div>
+                    <div class="icon-item" id="categories-btn">
+                        <img src="images/image_menu_category.png" alt="Категории" class="avatar">
+                        <div class="icon-text">Категории</div>
+                    </div>
+                    <div class="icon-item">
+                        <a href="cart.html" class="icon-link">
+                            <img src="images/image_menu_card.png" alt="Корзина" class="avatar">
+                            <div class="icon-text">Корзина</div>
+                        </a>
+                    </div>
+                    <div class="icon-item">
+                        <a href="account_login.html" class="icon-link">
+                            <img src="images/image_menu_ava.png" alt="Аватар" class="avatar">
+                            <div class="icon-text">Вход</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Боковое меню категорий -->
+    <div class="categories-menu" id="categories-menu">
+        <div class="menu-header">
+            <h2>Категории</h2>
+            <button class="close-btn" id="close-menu">×</button>
+        </div>
+        <div class="menu-content">
+            <ul class="categories-list">
+                <li><a href="#" class="category-link">Мебель</a></li>
+                <li><a href="#" class="category-link">Искусство</a></li>
+                <li><a href="#" class="category-link">Книги и манускрипты</a></li>
+                <li><a href="#" class="category-link">Посуда и фарфор</a></li>
+                <li><a href="#" class="category-link">Ювелирные изделия</a></li>
+                <li><a href="#" class="category-link">Монеты и награды</a></li>
+                <li><a href="#" class="category-link">Предметы быта и обихода</a></li>
+                <li><a href="#" class="category-link">Текстиль</a></li>
+                <li><a href="#" class="category-link">Оружие</a></li>
+                <li><a href="#" class="category-link">Иконы</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <main class="cart-main-content">
+        <!-- Левая колонка - товары в корзине -->
+        <div class="cart-items-section">
+            <div class="cart-controls">
+                <div class="select-all">
+                    <input type="checkbox" id="select-all">
+                    <label for="select-all">Выбрать все</label>
+                </div>
+                <button class="delete-selected">Удалить выбранные</button>
+            </div>
+
+            <div class="cart-items">
+                <!-- Товар 1 -->
+                <div class="cart-item">
+                    <div class="item-checkbox">
+                        <input type="checkbox" class="item-select">
+                    </div>
+                    <div class="item-image">
+                        Изображение товара
+                    </div>
+                    <div class="item-details">
+                        <h3 class="item-title">Антикварная ваза, 1890</h3>
+                        <p class="item-author">Продавец: Иванов А.</p>
+                        <p class="item-price">30 000 руб.</p>
+                    </div>
+                    <div class="item-actions">
+                        <button class="remove-item">Удалить</button>
+                    </div>
+                </div>
+
+                <!-- Товар 2 -->
+                <div class="cart-item">
+                    <div class="item-checkbox">
+                        <input type="checkbox" class="item-select">
+                    </div>
+                    <div class="item-image">
+                        Изображение товара
+                    </div>
+                    <div class="item-details">
+                        <h3 class="item-title">Старинная икона, 18 век</h3>
+                        <p class="item-author">Продавец: Петрова М.</p>
+                        <p class="item-price">20 000 руб.</p>
+                    </div>
+                    <div class="item-actions">
+                        <button class="remove-item">Удалить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Правая колонка - итоговая информация -->
+        <div class="cart-summary">
+            <h2 class="summary-title">Ваш заказ</h2>
+            
+            <div class="summary-row summary-count">
+                <span>Товары, 2шт.</span>
+                <span>50 000 руб.</span>
+            </div>
+            
+            <div class="summary-row summary-discount">
+                <span>Скидка</span>
+                <span>0</span>
+            </div>
+            
+            <div class="summary-row summary-total">
+                <span>Итого</span>
+                <span>0 руб.</span>
+            </div>
+            
+            <button class="buy-button">Купить</button>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="contact-info">
+            <p>email: archivirus@shop.ru</p>
+            <p>Телефон: +7(800) 555-35-35</p>
+        </div>
+    </footer>
+
+    <script>
+        // Элементы меню
+        const categoriesBtn = document.getElementById('categories-btn');
+        const categoriesMenu = document.getElementById('categories-menu');
+        const closeMenu = document.getElementById('close-menu');
+        const overlay = document.getElementById('overlay');
+
+        document.addEventListener('DOMContentLoaded', function() {
+            SummCalc();
+        });
+
+        // Открытие меню
+        categoriesBtn.addEventListener('click', function() {
+            categoriesMenu.classList.add('active');
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        // Закрытие меню
+        function closeCategoriesMenu() {
+            categoriesMenu.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        closeMenu.addEventListener('click', closeCategoriesMenu);
+        overlay.addEventListener('click', closeCategoriesMenu);
+
+        // Закрытие меню при нажатии ESC
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeCategoriesMenu();
+            }
+        });
+
+        // Функционал корзины
+        const selectAllCheckbox = document.getElementById('select-all');
+        const itemCheckboxes = document.querySelectorAll('.item-select');
+        const deleteSelectedBtn = document.querySelector('.delete-selected');
+        const removeItemBtns = document.querySelectorAll('.remove-item');
+
+        // Выделить все товары
+        selectAllCheckbox.addEventListener('change', function() {
+            itemCheckboxes.forEach(checkbox => {
+                checkbox.checked = selectAllCheckbox.checked;
+            });
+        });
+
+        // Удаление выбранных товаров
+        deleteSelectedBtn.addEventListener('click', function() {
+            const selectedItems = document.querySelectorAll('.item-select:checked');
+            selectedItems.forEach(checkbox => {
+                const item = checkbox.closest('.cart-item');
+                item.remove(); // Удаляем элемент из DOM полностью
+            });
+            
+            // Сбросить "Выбрать все"
+            selectAllCheckbox.checked = false;
+            
+            // Пересчитать сумму после удаления
+            SummCalc();
+        });
+
+        // Удаление отдельных товаров
+        removeItemBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const item = this.closest('.cart-item');
+                item.remove(); // Удаляем элемент из DOM полностью
+                
+                // Пересчитать сумму после удаления
+                SummCalc();
+            });
+        });
+
+        function SummCalc() {
+            // Находим только ВИДИМЫЕ элементы с ценой товаров
+            const visibleItems = document.querySelectorAll('.cart-item:not([style*="display: none"])');
+            
+            let totalSum = 0;
+            let itemsCount = 0;
+            
+            // Проходим по всем видимым элементам и суммируем их цены
+            visibleItems.forEach(item => {
+                const priceElement = item.querySelector('.item-price');
+                if (priceElement) {
+                    // Получаем текст цены, убираем "руб." и пробелы, преобразуем в число
+                    const priceText = priceElement.textContent.replace('руб.', '').replace(/\s/g, '');
+                    const price = parseInt(priceText);
+                    
+                    // Проверяем, что цена - валидное число
+                    if (!isNaN(price)) {
+                        totalSum += price;
+                        itemsCount++;
+                    }
+                }
+            });
+            
+            // Форматируем сумму с пробелами для тысяч
+            const formattedSum = totalSum.toLocaleString('ru-RU') + ' руб.';
+            const formattedItemsSum = totalSum.toLocaleString('ru-RU') + ' руб.';
+            
+            // Находим элемент для отображения итоговой суммы
+            const totalElement = document.querySelector('.summary-total span:last-child');
+            
+            // Обновляем текст с итоговой суммой
+            if (totalElement) {
+                totalElement.textContent = formattedSum;
+            }
+            
+            // Обновляем блок с количеством товаров и их суммой
+            const summaryCountElement = document.querySelector('.summary-count');
+            if (summaryCountElement) {
+                const spans = summaryCountElement.querySelectorAll('span');
+                if (spans.length >= 2) {
+                    spans[0].textContent = `Товары, ${itemsCount}шт.`;
+                    spans[1].textContent = formattedItemsSum;
+                }
+            }
+            
+            return totalSum;
+        }
+    </script>
+</body>
+</html>

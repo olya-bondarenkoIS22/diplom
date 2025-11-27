@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход в аккаунт - Антикварный магазинчик</title>
+    <link rel="stylesheet" href="style\shared.css">
+    <link rel="stylesheet" href="style\header.css">
+    <link rel="stylesheet" href="style\style.css">
+    <link rel="stylesheet" href="style\login.css">
+
+    <script src="js/show_menu.js"></script>
+
+    <link rel="icon" href="..\images\logo_2.png" type="image/png">
+</head>
+<body>
+    <!-- Затемнение фона при открытом меню -->
+    <div class="overlay" id="overlay"></div>
+
+    <header class="header">
+        <div class="header-content">
+            <div class="header-left">
+                <img src="images\logo.png" alt="Логотип Антикварного магазинчика" class="logo">
+            </div>
+            <div class="icon-item">
+                <a href="menu.html" class="icon-link">
+                    <img src="images/image_menu_return.png" alt="Вернуться" class="avatar">
+                    <div class="icon-text">Вернуться</div>
+                </a>
+            </div>
+            <div class="header-right">
+                <div class="categories-icon" id="categories-btn">
+                    <img src="images\image_menu_category.png" alt="Категории" class="avatar">
+                    <div class="icon-text">Категории</div>
+                </div>
+            </div>
+            <div class="icon-item">
+                <a href="cart\cart.html" class="icon-link">
+                    <img src="images\image_menu_card.png" alt="Корзина" class="avatar">
+                    <div class="icon-text">Корзина</div>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Боковое меню категорий -->
+    <div class="categories-menu" id="categories-menu">
+        <div class="menu-header">
+            <h2>Категории</h2>
+            <button class="close-btn" id="close-menu">×</button>
+        </div>
+        <div class="menu-content">
+            <ul class="categories-list">
+                <li><a href="#" class="category-link">Мебель</a></li>
+                <li><a href="#" class="category-link">Искусство</a></li>
+                <li><a href="#" class="category-link">Книги и манускрипты</a></li>
+                <li><a href="#" class="category-link">Посуда и фарфор</a></li>
+                <li><a href="#" class="category-link">Ювелирные изделия</a></li>
+                <li><a href="#" class="category-link">Монеты и награды</a></li>
+                <li><a href="#" class="category-link">Предметы быта и обихода</a></li>
+                <li><a href="#" class="category-link">Текстиль</a></li>
+                <li><a href="#" class="category-link">Оружие</a></li>
+                <li><a href="#" class="category-link">Иконы</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <div class="container">
+            <p class="subtitle">Пожалуйста, введите данные:</p>
+            
+            <form>
+                <div class="input-group">
+                    <label for="login">Логин</label>
+                    <input type="text" id="login" name="login" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="password">Пароль</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                
+                <div class="links">
+                    <a href="#">Не могу войти</a>
+                    <a href="account_registration.html">Зарегистрироваться</a>
+                </div>
+                
+                <button type="submit" class="btn">Войти</button>
+
+                <div class="back-button-container">
+                    <a href="..\menu.html" class="back-button">
+                        ← Вернуться назад
+                    </a>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="contact-info">
+            <p>email: archivirus@shop.ru</p>
+            <p>Телефон: +7(800) 555-35-35</p>
+        </div>
+    </footer>
+</body>
+</html>

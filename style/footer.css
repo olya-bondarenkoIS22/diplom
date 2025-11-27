@@ -1,0 +1,16 @@
+
+.footer {
+    background-color: #6E2B4E;
+    color: #e0d6c8;
+    padding: 20px;
+    text-align: left;
+}
+
+.contact-info {
+    max-width: 1200px;
+}
+
+.contact-info p {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
