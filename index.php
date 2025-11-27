@@ -1,4 +1,4 @@
 <?php
-$content = file_get_contents('menu.html', true);
+$content = file_get_contents('home.html', true);
 echo $content;
 ?>
