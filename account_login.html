@@ -6,8 +6,9 @@
     <title>Вход в аккаунт - Антикварный магазинчик</title>
     <link rel="stylesheet" href="style\shared.css">
     <link rel="stylesheet" href="style\header.css">
-    <link rel="stylesheet" href="style\style.css">
     <link rel="stylesheet" href="style\login.css">
+    <link rel="stylesheet" href="style\menu.css">
+    <link rel="stylesheet" href="style\footer.css">
 
     <script src="js/show_menu.js"></script>
 
@@ -22,23 +23,20 @@
             <div class="header-left">
                 <img src="images\logo.png" alt="Логотип Антикварного магазинчика" class="logo">
             </div>
-            <div class="icon-item">
-                <a href="home.html" class="icon-link">
-                    <img src="images/image_menu_return.png" alt="Вернуться" class="avatar">
-                    <div class="icon-text">Вернуться</div>
-                </a>
-            </div>
             <div class="header-right">
-                <div class="categories-icon" id="categories-btn">
-                    <img src="images\image_menu_category.png" alt="Категории" class="avatar">
-                    <div class="icon-text">Категории</div>
+                <div class="header-icons">
+                    <div class="icon-item" id="categories-btn">
+                        <img src="images\image_menu_category.png" alt="Категории" class="avatar">
+                        <div class="icon-text">Категории</div>
+                    </div>
+                    <div class="icon-item">
+                        <a href="cart.html" class="icon-link">
+                            <img src="images\image_menu_card.png" alt="Корзина" class="avatar">
+                            <div class="icon-text">Корзина</div>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="icon-item">
-                <a href="cart\cart.html" class="icon-link">
-                    <img src="images\image_menu_card.png" alt="Корзина" class="avatar">
-                    <div class="icon-text">Корзина</div>
-                </a>
+
             </div>
         </div>
     </header>
@@ -88,7 +86,7 @@
                 <button type="submit" class="btn">Войти</button>
 
                 <div class="back-button-container">
-                    <a href="..\menu.html" class="back-button">
+                    <a href="home.html" class="back-button">
                         ← Вернуться назад
                     </a>
                 </div>
