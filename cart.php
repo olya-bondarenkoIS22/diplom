@@ -1,77 +1,26 @@
+    
+<?php
+$pageTitle = isset($pageTitle) ? $pageTitle : "Мой сайт";
+?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Корзина - Антикварный магазинчик</title>
-    <link rel="stylesheet" href="style\shared.css">
-    <link rel="stylesheet" href="style\cart.css">
-    <link rel="stylesheet" href="style\header.css">
-    <link rel="stylesheet" href="style\menu.css">
-    <link rel="stylesheet" href="style\footer.css">
-    <!-- <link rel="stylesheet" href="cart.css"> -->
+    
+    <link rel="stylesheet" href="css\shared.css">
+    <link rel="stylesheet" href="css\cart.css">
+    <link rel="stylesheet" href="css\header.css">
+    <link rel="stylesheet" href="css\menu.css">
+    <link rel="stylesheet" href="css\footer.css"> 
+
     <link rel="icon" href="images/logo_2.png" type="image/png">
 </head>
-<body>
-    <!-- Затемнение фона при открытом меню -->
-    <div class="overlay" id="overlay"></div>
-
-    <header class="header">
-        <div class="header-content">
-            <div class="header-left">
-                <img src="images/logo.png" alt="Логотип Archivirus" class="logo">
-            </div>
-            <div class="header-right">
-                <div class="header-icons">
-                    <div class="icon-item">
-                        <a href="home.html" class="icon-link">
-                            <img src="images/image_menu_return.png" alt="Вернуться" class="avatar">
-                            <div class="icon-text">Вернуться</div>
-                        </a>
-                    </div>
-                    <div class="icon-item" id="categories-btn">
-                        <img src="images/image_menu_category.png" alt="Категории" class="avatar">
-                        <div class="icon-text">Категории</div>
-                    </div>
-                    <div class="icon-item">
-                        <a href="cart.html" class="icon-link">
-                            <img src="images/image_menu_card.png" alt="Корзина" class="avatar">
-                            <div class="icon-text">Корзина</div>
-                        </a>
-                    </div>
-                    <div class="icon-item">
-                        <a href="account_login.html" class="icon-link">
-                            <img src="images/image_menu_ava.png" alt="Аватар" class="avatar">
-                            <div class="icon-text">Вход</div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Боковое меню категорий -->
-    <div class="categories-menu" id="categories-menu">
-        <div class="menu-header">
-            <h2>Категории</h2>
-            <button class="close-btn" id="close-menu">×</button>
-        </div>
-        <div class="menu-content">
-            <ul class="categories-list">
-                <li><a href="#" class="category-link">Мебель</a></li>
-                <li><a href="#" class="category-link">Искусство</a></li>
-                <li><a href="#" class="category-link">Книги и манускрипты</a></li>
-                <li><a href="#" class="category-link">Посуда и фарфор</a></li>
-                <li><a href="#" class="category-link">Ювелирные изделия</a></li>
-                <li><a href="#" class="category-link">Монеты и награды</a></li>
-                <li><a href="#" class="category-link">Предметы быта и обихода</a></li>
-                <li><a href="#" class="category-link">Текстиль</a></li>
-                <li><a href="#" class="category-link">Оружие</a></li>
-                <li><a href="#" class="category-link">Иконы</a></li>
-            </ul>
-        </div>
-    </div>
-
+<body> 
+    <?php
+    include 'model/header.php';
+    ?>
     <main class="cart-main-content">
         <!-- Левая колонка - товары в корзине -->
         <div class="cart-items-section">
@@ -144,13 +93,6 @@
             <button class="buy-button">Купить</button>
         </div>
     </main>
-
-    <footer class="footer">
-        <div class="contact-info">
-            <p>email: archivirus@shop.ru</p>
-            <p>Телефон: +7(800) 555-35-35</p>
-        </div>
-    </footer>
 
     <script>
         // Элементы меню
@@ -274,5 +216,10 @@
             return totalSum;
         }
     </script>
+
+    <?php
+    // Подключаем footer
+    include 'model/footer.php';
+    ?>
 </body>
 </html>
