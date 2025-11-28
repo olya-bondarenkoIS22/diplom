@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Профиль - Антикварный магазинчик</title>
-    <link rel="stylesheet" href="style\shared.css">
-    <link rel="stylesheet" href="style\header.css">
-    <link rel="stylesheet" href="style\menu.css">
-    <link rel="stylesheet" href="style\personal_account.css">
-    <link rel="stylesheet" href="style\footer.css">
+    <link rel="stylesheet" href="css\shared.css">
+    <link rel="stylesheet" href="css\header.css">
+    <link rel="stylesheet" href="css\menu.css">
+    <link rel="stylesheet" href="css\personal_account.css">
+    <link rel="stylesheet" href="css\footer.css">
 
     <script src="js/show_menu.js"></script>
 

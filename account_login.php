@@ -18,54 +18,6 @@
     <?php
     include 'model/header.php';
     ?>
-    <!-- Затемнение фона при открытом меню -->
-
-    <!-- <div class="overlay" id="overlay"></div>
-
-    <header class="header">
-        <div class="header-content">
-            <div class="header-left">
-                <img src="images\logo.png" alt="Логотип Антикварного магазинчика" class="logo">
-            </div>
-            <div class="header-right">
-                <div class="header-icons">
-                    <div class="icon-item" id="categories-btn">
-                        <img src="images\image_menu_category.png" alt="Категории" class="avatar">
-                        <div class="icon-text">Категории</div>
-                    </div>
-                    <div class="icon-item">
-                        <a href="cart.html" class="icon-link">
-                            <img src="images\image_menu_card.png" alt="Корзина" class="avatar">
-                            <div class="icon-text">Корзина</div>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </header> -->
-
-    <!-- Боковое меню категорий -->
-    <!-- <div class="categories-menu" id="categories-menu">
-        <div class="menu-header">
-            <h2>Категории</h2>
-            <button class="close-btn" id="close-menu">×</button>
-        </div>
-        <div class="menu-content">
-            <ul class="categories-list">
-                <li><a href="#" class="category-link">Мебель</a></li>
-                <li><a href="#" class="category-link">Искусство</a></li>
-                <li><a href="#" class="category-link">Книги и манускрипты</a></li>
-                <li><a href="#" class="category-link">Посуда и фарфор</a></li>
-                <li><a href="#" class="category-link">Ювелирные изделия</a></li>
-                <li><a href="#" class="category-link">Монеты и награды</a></li>
-                <li><a href="#" class="category-link">Предметы быта и обихода</a></li>
-                <li><a href="#" class="category-link">Текстиль</a></li>
-                <li><a href="#" class="category-link">Оружие</a></li>
-                <li><a href="#" class="category-link">Иконы</a></li>
-            </ul>
-        </div>
-    </div> -->
 
     <main class="main-content">
         <div class="container">
@@ -97,13 +49,6 @@
             </form>
         </div>
     </main>
-
-    <!-- <footer class="footer">
-        <div class="contact-info">
-            <p>email: archivirus@shop.ru</p>
-            <p>Телефон: +7(800) 555-35-35</p>
-        </div>
-    </footer> -->
     <?php
     // Подключаем footer
     include 'model/footer.php';

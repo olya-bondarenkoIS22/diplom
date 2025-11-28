@@ -10,38 +10,14 @@
     <link rel="stylesheet" href="css\menu.css">
     <link rel="stylesheet" href="css\footer.css">
 
+    <script src="js/show_menu.js"></script>
+
     <link rel="icon" href="images\logo_2.png" type="image/png">
 </head>
 <body>
     <?php
     include 'model/header.php';
     ?>
-
-    <!-- <header class="header">
-        <div class="header-content">
-            <div class="header-left">
-                <img src="images\logo.png" alt="Логотип Archivirus" class="logo">
-            </div>
-            <div class="icon-item">
-                <a href="home.html" class="icon-link">
-                    <img src="images/image_menu_return.png" alt="Вернуться" class="avatar">
-                    <div class="icon-text">Вернуться</div>
-                </a>
-            </div>
-            <div class="header-right">
-                <div class="categories-icon" id="categories-btn">
-                    <img src="images\image_menu_category.png" alt="Категории" class="avatar">
-                    <div class="icon-text">Категории</div>
-                </div>
-            </div>
-            <div class="icon-item">
-                <a href="cart.html" class="icon-link">
-                    <img src="images\image_menu_card.png" alt="Корзина" class="avatar">
-                    <div class="icon-text">Корзина</div>
-                </a>
-            </div>
-        </div>
-    </header> -->
 
     <main class="main-content">
         <div class="container">
@@ -65,7 +41,7 @@
                 
                 <button type="submit" class="btn">Зарегистрироваться</button>
                 <div class="back-button-container">
-                    <a href="account_login.html" class="back-button">
+                    <a href="account_login.php" class="back-button">
                         ← Вернуться назад
                     </a>
                 </div>
@@ -73,12 +49,6 @@
         </div>
     </main>
 
-    <!-- <footer class="footer">
-        <div class="contact-info">
-            <p>email: archivirus@shop.ru</p>
-            <p>Телефон: +7(800) 555-35-35</p>
-        </div>
-    </footer> -->
     <?php
     // Подключаем footer
     include 'model/footer.php';
