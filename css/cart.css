@@ -1,4 +1,9 @@
 /* Стили для страницы корзины */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
 
 .cart-main-content {
     max-width: 1200px;
