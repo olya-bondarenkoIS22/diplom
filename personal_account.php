@@ -16,56 +16,9 @@
     <link rel="icon" href="images\logo_2.png" type="image/png">
 </head>
 <body>
-    <!-- Затемнение фона при открытом меню -->
-    <div class="overlay" id="overlay"></div>
-
-    <header class="header">
-        <div class="header-content">
-            <div class="header-left">
-                <img src="images\logo.png" alt="Логотип Archivirus" class="logo">
-            </div>
-            <div class="header-right">
-                <div class="header-icons">
-                    <div class="icon-item" id="categories-btn">
-                        <img src="images\image_menu_category.png" alt="Категории" class="avatar">
-                        <div class="icon-text">Категории</div>
-                    </div>
-                    <div class="icon-item">
-                        <img src="images\image_menu_card.png" alt="Корзина" class="avatar">
-                        <div class="icon-text">Корзина</div>
-                    </div>
-                    <div class="icon-item">
-                        <div class="icon-link profile-menu">
-                            <img src="images\image_menu_ava.png" alt="Аватар" class="avatar">
-                            <div class="icon-text">Профиль</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Боковое меню категорий -->
-    <div class="categories-menu" id="categories-menu">
-        <div class="menu-header">
-            <h2>Категории</h2>
-            <button class="close-btn" id="close-menu">×</button>
-        </div>
-        <div class="menu-content">
-            <ul class="categories-list">
-                <li><a href="#" class="category-link">Мебель</a></li>
-                <li><a href="#" class="category-link">Искусство</a></li>
-                <li><a href="#" class="category-link">Книги и манускрипты</a></li>
-                <li><a href="#" class="category-link">Посуда и фарфор</a></li>
-                <li><a href="#" class="category-link">Ювелирные изделия</a></li>
-                <li><a href="#" class="category-link">Монеты и награды</a></li>
-                <li><a href="#" class="category-link">Предметы быта и обихода</a></li>
-                <li><a href="#" class="category-link">Текстиль</a></li>
-                <li><a href="#" class="category-link">Оружие</a></li>
-                <li><a href="#" class="category-link">Иконы</a></li>
-            </ul>
-        </div>
-    </div>
+    <?php
+    include 'model/header.php';
+    ?>
 
     <main class="main-content-profile">
         <!-- Левая колонка - информация профиля -->
@@ -167,11 +120,9 @@
         </div>
     </main>
 
-    <footer class="footer">
-        <div class="contact-info">
-            <p>email: archivirus@shop.ru</p>
-            <p>Телефон: +7(800) 555-35-35</p>
-        </div>
-    </footer>
+    <?php
+    // Подключаем footer
+    include 'model/footer.php';
+    ?>
 </body>
 </html>
