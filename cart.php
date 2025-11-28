@@ -1,7 +1,3 @@
-    
-<?php
-$pageTitle = isset($pageTitle) ? $pageTitle : "Мой сайт";
-?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>

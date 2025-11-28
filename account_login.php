@@ -15,8 +15,12 @@
     <link rel="icon" href="..\images\logo_2.png" type="image/png">
 </head>
 <body>
+    <?php
+    include 'model/header.php';
+    ?>
     <!-- Затемнение фона при открытом меню -->
-    <div class="overlay" id="overlay"></div>
+
+    <!-- <div class="overlay" id="overlay"></div>
 
     <header class="header">
         <div class="header-content">
@@ -39,10 +43,10 @@
 
             </div>
         </div>
-    </header>
+    </header> -->
 
     <!-- Боковое меню категорий -->
-    <div class="categories-menu" id="categories-menu">
+    <!-- <div class="categories-menu" id="categories-menu">
         <div class="menu-header">
             <h2>Категории</h2>
             <button class="close-btn" id="close-menu">×</button>
@@ -61,7 +65,7 @@
                 <li><a href="#" class="category-link">Иконы</a></li>
             </ul>
         </div>
-    </div>
+    </div> -->
 
     <main class="main-content">
         <div class="container">
@@ -80,7 +84,7 @@
                 
                 <div class="links">
                     <a href="#">Не могу войти</a>
-                    <a href="account_registration.html">Зарегистрироваться</a>
+                    <a href="account_registration.php">Зарегистрироваться</a>
                 </div>
                 
                 <button type="submit" class="btn">Войти</button>
@@ -94,11 +98,15 @@
         </div>
     </main>
 
-    <footer class="footer">
+    <!-- <footer class="footer">
         <div class="contact-info">
             <p>email: archivirus@shop.ru</p>
             <p>Телефон: +7(800) 555-35-35</p>
         </div>
-    </footer>
+    </footer> -->
+    <?php
+    // Подключаем footer
+    include 'model/footer.php';
+    ?>
 </body>
 </html>

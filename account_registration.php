@@ -4,15 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Регистрация - Антикварный магазинчик</title>
-    <link rel="stylesheet" href="style\shared.css">
-    <link rel="stylesheet" href="style\header.css">
-    <link rel="stylesheet" href="style\login.css">
-    <link rel="stylesheet" href="style\footer.css">
+    <link rel="stylesheet" href="css\shared.css">
+    <link rel="stylesheet" href="css\header.css">
+    <link rel="stylesheet" href="css\login.css">
+    <link rel="stylesheet" href="css\menu.css">
+    <link rel="stylesheet" href="css\footer.css">
 
     <link rel="icon" href="images\logo_2.png" type="image/png">
 </head>
 <body>
-    <header class="header">
+    <?php
+    include 'model/header.php';
+    ?>
+
+    <!-- <header class="header">
         <div class="header-content">
             <div class="header-left">
                 <img src="images\logo.png" alt="Логотип Archivirus" class="logo">
@@ -36,7 +41,7 @@
                 </a>
             </div>
         </div>
-    </header>
+    </header> -->
 
     <main class="main-content">
         <div class="container">
@@ -68,11 +73,15 @@
         </div>
     </main>
 
-    <footer class="footer">
+    <!-- <footer class="footer">
         <div class="contact-info">
             <p>email: archivirus@shop.ru</p>
             <p>Телефон: +7(800) 555-35-35</p>
         </div>
-    </footer>
+    </footer> -->
+    <?php
+    // Подключаем footer
+    include 'model/footer.php';
+    ?>
 </body>
 </html>

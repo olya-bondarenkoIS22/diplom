@@ -5,8 +5,6 @@
     font-family: 'Georgia', serif;
 }
 
-body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+body  {
+     height: 100%;
 }
