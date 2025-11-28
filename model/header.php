@@ -5,7 +5,7 @@
 <header class="header">
     <div class="header-content">
         <div class="header-left">
-            <img src="images/logo.png" alt="Логотип Archivirus" class="logo">
+            <img href="index.php" src="images/logo.png" alt="Логотип Archivirus" class="logo">
         </div>
         <div class="header-right">
             <div class="header-icons">
