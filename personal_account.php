@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="css\personal_account.css">
     <link rel="stylesheet" href="css\footer.css">
 
-    <link rel="stylesheet" href="css\variables.css">
+    <!-- <link rel="stylesheet" href="css\variables.css">
     <link rel="stylesheet" href="css\typography.css">
     <link rel="stylesheet" href="css\buttons.css">
-    <link rel="stylesheet" href="css\utilities.css ">
+    <link rel="stylesheet" href="css\utilities.css "> -->
     
 
 
