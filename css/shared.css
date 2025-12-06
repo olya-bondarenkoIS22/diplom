@@ -4,3 +4,18 @@
     box-sizing: border-box;
     font-family: 'Georgia', serif;
 }
+
+html, body {
+    height: 100%; /* Важно! */
+}
+        
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1; /* Занимает всё доступное пространство */
+    padding: 20px;
+}
