@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отзывы о продавце</title>
+    <link rel="stylesheet" href="style\shared.css">
+    <link rel="stylesheet" href="style\header.css">
+    <link rel="stylesheet" href="style\comment.css">
+    <link rel="stylesheet" href="style\footer.css">
+    
+    <script src="js/show_menu.js"></script>
+    <link rel="icon" href="images\logo_2.png" type="image/png">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="overlay" id="overlay"></div>
+    <header class="header">
+        <div class="header-content">
+            <div class="header-left">
+                <img src="images\logo.png" alt="Логотип Archivirus" class="logo">
+            </div>
+            <div class="header-right">
+                <div class="header-icons">
+                    <div class="icon-item" id="categories-btn">
+                        <img src="images\image_menu_category.png" alt="Категории" class="avatar">
+                        <div class="icon-text">Категории</div>
+                    </div>
+                    <div class="icon-item">
+                        <a href="cart.html" class="icon-link">
+                            <img src="images\image_menu_card.png" alt="Корзина" class="avatar">
+                            <div class="icon-text">Корзина</div>
+                        </a>
+                    </div>
+                    <div class="icon-item">
+                        <a href="account_login.html" class="icon-link">
+                            <img src="images\image_menu_ava.png" alt="Аватар" class="avatar">
+                            <div class="icon-text">Вход</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <!-- Левая колонка с комментариями -->
+        <div class="comments-section">
+            <h2>Отзывы покупателей</h2>
+            
+            <div class="comment">
+                <div class="comment-header">
+                    <span class="comment-author">Анна Петрова</span>
+                    <span class="comment-date">15.12.2023</span>
+                </div>
+                <div class="comment-rating">★ ★ ★ ★ ★</div>
+                <p class="comment-text">
+                    Отличный продавец! Товар соответствует описанию, доставка быстрая. 
+                    Очень довольна покупкой, буду рекомендовать друзьям.
+                </p>
+                <div class="comment-images">
+                    <img src="https://via.placeholder.com/100" alt="Фото товара 1" class="comment-image">
+                    <img src="https://via.placeholder.com/100" alt="Фото товара 2" class="comment-image">
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-header">
+                    <span class="comment-author">Иван Сидоров</span>
+                    <span class="comment-date">10.12.2023</span>
+                </div>
+                <div class="comment-rating">★ ★ ★ ★ ☆</div>
+                <p class="comment-text">
+                    Хороший товар, но была небольшая задержка с доставкой. 
+                    Продавец вежливый, отвечает быстро. В целом впечатления положительные.
+                </p>
+                <div class="comment-images">
+                    <img src="https://via.placeholder.com/100" alt="Фото товара" class="comment-image">
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-header">
+                    <span class="comment-author">Мария Иванова</span>
+                    <span class="comment-date">05.12.2023</span>
+                </div>
+                <div class="comment-rating">★ ★ ★ ★ ★</div>
+                <p class="comment-text">
+                    Прекрасное качество! Все как на фото. Продавец очень помог с выбором размера. 
+                    Спасибо за отличный сервис!
+                </p>
+                <div class="comment-images">
+                    <!-- Без изображений -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Правая колонка с информацией о продавце -->
+        <div class="seller-section">
+            <div class="seller-header">
+                <img src="https://via.placeholder.com/100" alt="Аватар продавца" class="seller-avatar">
+                <div class="seller-name">Александр Прохоров</div>
+            </div>
+
+            <div class="seller-rating">
+                <div class="rating-stars">★ ★ ★ ★ ☆</div>
+                <div class="rating-value">4.7/5</div>
+            </div>
+
+            <div class="seller-stats">
+                <div class="stat-item">
+                    <span>На площадке:</span>
+                    <span>3 года</span>
+                </div>
+                <div class="stat-item">
+                    <span>Отзывов:</span>
+                    <span>156</span>
+                </div>
+                <div class="stat-item">
+                    <span>Положительных:</span>
+                    <span>94%</span>
+                </div>
+                <div class="stat-item">
+                    <span>Доставка вовремя:</span>
+                    <span>98%</span>
+                </div>
+            </div>
+
+            <button class="write-review-btn">Написать отзыв</button>
+        </div>
+    </div>
+
+    <script>
+        // Обработчик для кнопки "Написать отзыв"
+        document.querySelector('.write-review-btn').addEventListener('click', function() {
+            alert('Форма для написания отзыва будет открыта здесь!');
+            // Здесь можно добавить логику для открытия модального окна с формой отзыва
+        });
+
+        // Обработчики для клика по изображениям в отзывах
+        document.querySelectorAll('.comment-image').forEach(img => {
+            img.addEventListener('click', function() {
+                // Здесь можно добавить логику для открытия изображения в полноэкранном режиме
+                console.log('Открыть изображение: ' + this.alt);
+            });
+        });
+    </script>
+</body>
+</html>
