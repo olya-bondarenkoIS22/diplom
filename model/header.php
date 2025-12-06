@@ -7,6 +7,12 @@
         <div class="header-left">
             <img href="index.php" src="images/logo.png" alt="Логотип Archivirus" class="logo">
         </div>
+        <div class="header-center">
+            <form action="search_results.php" method="GET" class="search-form">
+                <input type="text" name="query" class="search-input" placeholder="Поиск антиквариата...">
+                <button type="submit" class="search-btn">Поиск</button>
+            </form>
+        </div>
         <div class="header-right">
             <div class="header-icons">
                 <!-- <div class="icon-item">

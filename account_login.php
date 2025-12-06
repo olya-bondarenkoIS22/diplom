@@ -23,7 +23,7 @@
         <div class="container">
             <p class="subtitle">Пожалуйста, введите данные:</p>
             
-            <form>
+            <form class="login-form" action="process_login.php" method="POST">
                 <div class="input-group">
                     <label for="login">Логин</label>
                     <input type="text" id="login" name="login" required>

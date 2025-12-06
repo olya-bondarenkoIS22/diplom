@@ -27,7 +27,7 @@
     justify-content: center;
 }
 
-.search-input {
+/* .search-input {
     padding: 12px 20px;
     border: 1px solid #d4c9b9;
     border-radius: 4px;
@@ -61,7 +61,7 @@
 
 .search-btn:hover {
     background-color: #f5f2e9;
-}
+} */
 
 .content-blocks {
     display: flex;

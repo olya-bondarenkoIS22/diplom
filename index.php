@@ -24,14 +24,14 @@
     ?>
 
     <main class="main-content">
-        <div class="search-container">
+        <!-- <div class="search-container">
             <div class="search-section">
                 <div class="search-group">
                     <input type="text" class="search-input" placeholder="Поиск">
                     <button type="submit" class="search-btn">Найти</button>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <div class="content-blocks">
             <div class="content-block">

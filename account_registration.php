@@ -23,7 +23,7 @@
         <div class="container">
             <p class="subtitle">Пожалуйста, заполните все поля:</p>
             
-            <form>
+            <form class="login-form" action="process_registration.php" method="POST">
                 <div class="input-group">
                     <label for="login">Логин:</label>
                     <input type="text" id="login" name="login" required>

@@ -178,7 +178,7 @@ input[type="tel"]:focus {
     text-decoration: underline;
 }
 
-/* .btn {
+.btn {
     background-color: #6E2B4E;
     color: white;
     border: none;
@@ -193,9 +193,33 @@ input[type="tel"]:focus {
 
 .btn:hover {
     background-color: #5a2240;
-} */
+}
 
 /* Стили для кнопки Вернуться назад */
+.back-button-container {
+    margin-bottom: 25px;
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #6E2B4E;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: normal;
+    padding: 10px 15px;
+    border: 1px solid #6E2B4E;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    background-color: white;
+}
+
+.back-button:hover {
+    background-color: #6E2B4E;
+    color: white;
+    text-decoration: none;
+}
 
 /* Стили для страницы профиля */
 .main-content-profile {
@@ -223,7 +247,7 @@ input[type="tel"]:focus {
     text-align: center;
     margin-bottom: 25px;
     padding-bottom: 20px;
-    /* border-bottom: 2px solid #f5f2e9; */
+    border-bottom: 2px solid #f5f2e9;
 }
 
 .profile-avatar img {
@@ -235,10 +259,33 @@ input[type="tel"]:focus {
     margin-bottom: 15px;
 }
 
+.profile-nickname {
+    font-size: 24px;
+    color: #5a4a42;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
 .profile-actions {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+.profile-btn {
+    padding: 10px 15px;
+    border: 1px solid #6E2B4E;
+    border-radius: 6px;
+    background: white;
+    color: #6E2B4E;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.profile-btn:hover {
+    background: #6E2B4E;
+    color: white;
 }
 
 .contact-actions {
@@ -246,6 +293,22 @@ input[type="tel"]:focus {
     flex-direction: column;
     gap: 10px;
     margin-bottom: 25px;
+}
+
+.contact-btn {
+    padding: 12px 15px;
+    border: 1px solid #6E2B4E;
+    border-radius: 6px;
+    background: white;
+    color: #6E2B4E;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+    background: #6E2B4E;
+    color: white;
 }
 
 .profile-info, .blog-info, .subscriptions {
@@ -278,6 +341,22 @@ input[type="tel"]:focus {
     margin-top: 15px;
 }
 
+.blog-btn {
+    padding: 10px 15px;
+    border: 1px solid #6E2B4E;
+    border-radius: 6px;
+    background: white;
+    color: #6E2B4E;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.blog-btn:hover {
+    background: #6E2B4E;
+    color: white;
+}
 
 .subscriptions-list {
     display: flex;
@@ -291,6 +370,22 @@ input[type="tel"]:focus {
     border-radius: 4px;
     color: #5a4a42;
     border: 1px solid #e0d6c8;
+}
+
+.create-blog-btn {
+    width: 100%;
+    padding: 12px;
+    background: #6E2B4E;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.create-blog-btn:hover {
+    background: #5a2240;
 }
 
 /* Правая колонка - контент профиля */
