@@ -1,26 +1,25 @@
+<?php
+require_once 'includes/session.php';
+require_once 'includes/functions.php';
+
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Профиль - Антикварный магазинчик</title>
-    <link rel="stylesheet" href="css\shared.css">
-    <link rel="stylesheet" href="css\header.css">
-    <link rel="stylesheet" href="css\menu.css">
-    <link rel="stylesheet" href="css\personal_account.css">
-    <link rel="stylesheet" href="css\footer.css">
+    <link rel="stylesheet" href="assets/css/shared.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/menu.css">
+    <link rel="stylesheet" href="assets/css/personal_account.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
 
-    <!-- <link rel="stylesheet" href="css\variables.css">
-    <link rel="stylesheet" href="css\typography.css">
-    <link rel="stylesheet" href="css\buttons.css">
-    <link rel="stylesheet" href="css\utilities.css "> -->
-    
-
-
-    <script src="js/show_menu.js"></script>
+    <script src="assets/js/show_menu.js"></script>
 
     <!-- <link rel="stylesheet" href="style.css"> -->
-    <link rel="icon" href="images\logo_2.png" type="image/png">
+    <link rel="icon" href="assets/images/logo_2.png" type="image/png">
 </head>
 <body>
     <?php
@@ -32,7 +31,7 @@
         <div class="profile-sidebar">
             <div class="profile-header">
                 <div class="profile-avatar">
-                    <img src="..\images\avatar\image_menu_ava.png" alt="Аватар пользователя">
+                    <img src="assets/images/avatar/image_menu_ava.png" alt="Аватар пользователя">
                 </div>
                 <h2 class="profile-nickname">Nickname</h2>
                 <div class="profile-actions">

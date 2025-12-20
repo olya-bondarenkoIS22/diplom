@@ -1,18 +1,24 @@
+<?php
+require_once 'includes/session.php';
+require_once 'includes/functions.php';
+
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Название блога</title>
-    <link rel="stylesheet" href="css\shared.css">
-    <link rel="stylesheet" href="css\header.css">
-    <link rel="stylesheet" href="css\menu.css">
-    <link rel="stylesheet" href="css\personal_blog.css">
-    <link rel="stylesheet" href="css\footer.css">
+    <link rel="stylesheet" href="assets/css/shared.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/menu.css">
+    <link rel="stylesheet" href="assets/css/personal_blog.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
 
-    <link rel="icon" href="..\images\logo_2.png" type="image/png">
-
-    <script src="js/show_menu.js"></script>
+    <script src="assets/js/show_menu.js"></script>
+    
+    <link rel="icon" href="assets/images/logo_2.png" type="image/png">
 </head>
 <body>
    <?php
@@ -22,7 +28,7 @@
      <main class="main-content">
         <div class="blog-header">
             <div class="blog-logo">
-                <img src="..\images\avatar\image_menu_ava.png" alt="Аватар пользователя">
+                <img src="assets/images/avatar/image_menu_ava.png" alt="Аватар пользователя">
                 <!-- Логотип блога -->
             </div>
             <div class="blog-info">

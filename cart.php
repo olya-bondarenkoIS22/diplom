@@ -1,3 +1,9 @@
+<?php
+require_once 'includes/session.php';
+require_once 'includes/functions.php';
+
+// session_start();
+?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -5,13 +11,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Корзина - Антикварный магазинчик</title>
     
-    <link rel="stylesheet" href="css\shared.css">
-    <link rel="stylesheet" href="css\cart.css">
-    <link rel="stylesheet" href="css\header.css">
-    <link rel="stylesheet" href="css\menu.css">
-    <link rel="stylesheet" href="css\footer.css"> 
+    <link rel="stylesheet" href="assets/css/shared.css">
+    <link rel="stylesheet" href="assets/css/cart.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/menu.css">
+    <link rel="stylesheet" href="assets/css/footer.css"> 
 
-    <link rel="icon" href="images/logo_2.png" type="image/png">
+    <link rel="icon" href="assets/images/logo_2.png" type="image/png">
 </head>
 <body> 
     <?php

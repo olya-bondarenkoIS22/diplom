@@ -1,6 +1,8 @@
 <?php
-// $content = file_get_contents('home.html', true);
-// echo $content;
+require_once 'includes/session.php';
+require_once 'includes/functions.php';
+
+// session_start();
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -8,15 +10,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная страница - Антикварный магазинчик</title>
-    <link rel="stylesheet" href="css\shared.css">
-    <link rel="stylesheet" href="css\header.css">
-    <link rel="stylesheet" href="css\home.css">
-    <link rel="stylesheet" href="css\menu.css">
-    <link rel="stylesheet" href="css\footer.css">
+    <link rel="stylesheet" href="assets/css/shared.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/menu.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
 
-    <script src="js/show_menu.js"></script>
+    <script src="assets/js/show_menu.js"></script>
 
-    <link rel="icon" href="images\logo_2.png" type="image/png">
+    <link rel="icon" href="assets/images/logo_2.png" type="image/png">
 </head>
 <body>
     <?php

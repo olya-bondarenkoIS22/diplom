@@ -1,29 +1,58 @@
+<?php
+require_once 'includes/session.php';
+require_once 'includes/functions.php';
+?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Вход в аккаунт - Антикварный магазинчик</title>
-    <link rel="stylesheet" href="css\shared.css">
-    <link rel="stylesheet" href="css\header.css">
-    <link rel="stylesheet" href="css\login.css">
-    <link rel="stylesheet" href="css\menu.css">
-    <link rel="stylesheet" href="css\footer.css">
+    <link rel="stylesheet" href="assets/css/shared.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="assets/css/menu.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
 
-    <script src="js/show_menu.js"></script>
+    <script src="assets/js/show_menu.js"></script>
 
-    <link rel="icon" href="..\images\logo_2.png" type="image/png">
+    <link rel="icon" href="assets/images/logo_2.png" type="image/png">
 </head>
 <body>
     <?php
     include 'model/header.php';
-    ?>
 
+    $error = '';
+
+    if($_SERVER["REQUEST_METHOD"] == "POST") {
+        $login = sanitizeInput($_POST['login']);
+        $password = $_POST['password'];
+        
+        if(empty($email) || empty($password)) {
+            $error = "Заполните все поля";
+        } else {
+            $user = loginUser($login, $password);
+            
+            if($user) {
+                setUserSession($user);
+                header("Location: personal_account.php");
+                exit();
+            } else {
+                $error = "Неверный email или пароль";
+            }
+        }
+        // Если пользователь уже авторизован, перенаправляем
+        if (isLoggedIn()) {
+            header("Location: index.php");
+            exit();
+        }
+    }
+    ?>
     <main class="main-content">
         <div class="container">
             <p class="subtitle">Пожалуйста, введите данные:</p>
             
-            <form class="login-form" action="process_login.php" method="POST">
+            <form class="login-form" action="" method="POST">
                 <div class="input-group">
                     <label for="login">Логин</label>
                     <input type="text" id="login" name="login" required>
