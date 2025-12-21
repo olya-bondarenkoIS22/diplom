@@ -317,6 +317,14 @@ input[type="tel"]:focus {
     border-bottom: 1px solid #f5f2e9;
 }
 
+.logout-btn {
+    text-decoration: none;
+}
+
+.logout-btn:hover {
+    text-decoration: none;
+}
+
 .profile-info h3, .blog-info h3, .subscriptions h3 {
     color: #5a4a42;
     margin-bottom: 15px;

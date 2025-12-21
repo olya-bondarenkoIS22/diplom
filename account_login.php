@@ -1,6 +1,33 @@
 <?php
 require_once 'includes/session.php';
 require_once 'includes/functions.php';
+
+// Если пользователь уже авторизован, перенаправляем
+if (isLoggedIn()) {
+    header("Location: personal_account.php");
+    exit();
+}
+
+$error = '';
+
+if($_SERVER["REQUEST_METHOD"] == "POST") {
+    $login = sanitizeInput($_POST['login']);
+    $password = $_POST['password'];
+    
+    if(empty($login) || empty($password)) {
+        $error = "Заполните все поля";
+    } else {
+        $user = loginUser($login, $password);
+        
+        if($user) {
+            setUserSession($user);
+            header("Location: personal_account.php");
+            exit();
+        } else {
+            $error = "Неверный логин или пароль";
+        }
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -21,32 +48,6 @@ require_once 'includes/functions.php';
 <body>
     <?php
     include 'model/header.php';
-
-    $error = '';
-
-    if($_SERVER["REQUEST_METHOD"] == "POST") {
-        $login = sanitizeInput($_POST['login']);
-        $password = $_POST['password'];
-        
-        if(empty($email) || empty($password)) {
-            $error = "Заполните все поля";
-        } else {
-            $user = loginUser($login, $password);
-            
-            if($user) {
-                setUserSession($user);
-                header("Location: personal_account.php");
-                exit();
-            } else {
-                $error = "Неверный email или пароль";
-            }
-        }
-        // Если пользователь уже авторизован, перенаправляем
-        if (isLoggedIn()) {
-            header("Location: index.php");
-            exit();
-        }
-    }
     ?>
     <main class="main-content">
         <div class="container">

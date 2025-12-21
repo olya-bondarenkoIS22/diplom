@@ -2,7 +2,11 @@
 require_once 'includes/session.php';
 require_once 'includes/functions.php';
 
-session_start();
+// Если не авторизован — перенаправляем на вход
+if (!isLoggedIn()) {
+    header("Location: account_login.php");
+    exit();
+}
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -33,10 +37,10 @@ session_start();
                 <div class="profile-avatar">
                     <img src="assets/images/avatar/image_menu_ava.png" alt="Аватар пользователя">
                 </div>
-                <h2 class="profile-nickname">Nickname</h2>
+                <h2 class="profile-nickname"><?php echo htmlspecialchars($_SESSION['user_login']); ?></h2>
                 <div class="profile-actions">
                     <button class="profile-btn edit-btn">Редактировать</button>
-                    <button class="profile-btn logout-btn">Выйти</button>
+                    <a href="logout.php" class="profile-btn logout-btn">Выйти</a>
                 </div>
             </div>
 
@@ -47,7 +51,7 @@ session_start();
 
             <div class="profile-info">
                 <h3>Краткая информация:</h3>
-                <p>Дата регистрации: <span class="info-value"></span></p>
+                <p>Дата регистрации: <span class="info-value"><?php echo htmlspecialchars($_SESSION['user_date_registration']); ?></span></p>
                 <p>Оценка: <span class="info-value"></span></p>
             </div>
 

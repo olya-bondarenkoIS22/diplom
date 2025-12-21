@@ -65,7 +65,7 @@ function loginUser($login, $password) {
     $database = new Database();
     $db = $database->getConnection();
     
-    $query = "SELECT id, login, phone_number, password FROM users WHERE login = :login";
+    $query = "SELECT id, login, phone_number, password, date_registration FROM users WHERE login = :login";
     $stmt = $db->prepare($query);
     $stmt->bindParam(":login", $login);
     $stmt->execute();
@@ -78,12 +78,14 @@ function loginUser($login, $password) {
             $_SESSION['user_id'] = $row['id'];
             $_SESSION['user_login'] = $row['login'];
             $_SESSION['user_phone'] = $row['phone_number'];
+            $_SESSION['user_date_registration'] = $row['date_registration'];
             $_SESSION['logged_in'] = true;
             
             return [
                 'id' => $row['id'],
                 'login' => $row['login'],
-                'phone_number' => $row['phone_number']
+                'phone_number' => $row['phone_number'],
+                'date_registration' => $row['date_registration']
             ];
         }
     }
@@ -112,7 +114,8 @@ function getCurrentUser() {
         return [
             'id' => $_SESSION['user_id'],
             'login' => $_SESSION['user_login'],
-            'phone_number' => $_SESSION['user_phone']
+            'phone_number' => $_SESSION['user_phone'],
+            'date_registration' => $_SESSION['user_date_registration']
         ];
     }
     return null;
