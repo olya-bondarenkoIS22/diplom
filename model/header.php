@@ -8,7 +8,9 @@ require_once __DIR__ . '/../config/constants.php';
 <header class="header">
     <div class="header-content">
         <div class="header-left">
-            <img href="index.php" src="assets/images/logo.png" alt="Логотип Archivirus" class="logo">
+            <a href="index.php">
+                <img src="assets/images/logo.png" alt="Логотип Archivirus" class="logo">
+            </a>
         </div>
         <div class="header-center">
             <form action="search_results.php" method="GET" class="search-form">
