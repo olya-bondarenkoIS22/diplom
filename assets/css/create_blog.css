@@ -1,0 +1,120 @@
+/* Контейнер формы, имитирующий белое модальное окно на скриншоте */
+.blog-form-container {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 800px;
+    margin: 40px auto;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.blog-form-container h1 {
+    text-align: center;
+    color: #000;
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+/* Верхняя часть: Фото и Основные поля */
+.form-main-section {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.photo-upload-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.photo-placeholder {
+    width: 200px;
+    height: 200px;
+    background-color: #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+/* Стилизация полей ввода как на макете */
+.inputs-column {
+    flex: 1;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #000;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: #eeeae7; /* Светло-серый фон из макета */
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    height: 120px;
+    resize: none;
+}
+
+/* Кнопки */
+.btn-purple {
+    background-color: #6E2B4E;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: opacity 0.3s;
+}
+
+.btn-purple:hover {
+    opacity: 0.9;
+}
+
+/* Секция списка (нижняя часть макета) */
+.blog-items-list {
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+}
+
+.blog-item {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+}
+
+.item-photo {
+    width: 120px;
+    height: 120px;
+    background: #000;
+    flex-shrink: 0;
+}
+
+.item-info {
+    flex: 1;
+}
+
+.item-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

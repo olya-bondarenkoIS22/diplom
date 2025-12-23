@@ -120,4 +120,20 @@ function getCurrentUser() {
     }
     return null;
 }
+
+function saveBlog($id_user, $blog_name, $address, $description, $image) {
+    $database = new Database();
+    $db = $database->getConnection();
+
+    $query = "INSERT INTO blogs (id_user, blog_name, created_date, description, address, image) 
+              VALUES (:id_user, :blog_name, NOW(), :description, :address, :image)";
+    $stmt = $db->prepare($query);
+    
+    $stmt->bindParam(':id_user', $id_user);
+    $stmt->bindParam(':blog_name', $blog_name);
+    $stmt->bindParam(':description', $description);
+    $stmt->bindParam(':address', $address);
+    $stmt->bindParam(':image', $image);
+    return $stmt->execute();
+}
 ?>

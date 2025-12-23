@@ -2,7 +2,6 @@
 require_once 'includes/session.php';
 require_once 'includes/functions.php';
 
-// Если не авторизован — перенаправляем на вход
 if (!isLoggedIn()) {
     header("Location: account_login.php");
     exit();
@@ -16,123 +15,123 @@ if (!isLoggedIn()) {
     <title>Профиль - Антикварный магазинчик</title>
     <link rel="stylesheet" href="assets/css/shared.css">
     <link rel="stylesheet" href="assets/css/header.css">
-    <link rel="stylesheet" href="assets/css/menu.css">
     <link rel="stylesheet" href="assets/css/personal_account.css">
     <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/menu.css">
 
     <script src="assets/js/show_menu.js"></script>
 
-    <!-- <link rel="stylesheet" href="style.css"> -->
     <link rel="icon" href="assets/images/logo_2.png" type="image/png">
 </head>
-<body>
-    <?php
-    include 'model/header.php';
-    ?>
+<body class="site-container">
+    <?php include 'model/header.php'; ?>
 
-    <main class="main-content-profile">
-        <!-- Левая колонка - информация профиля -->
-        <div class="profile-sidebar">
-            <div class="profile-header">
-                <div class="profile-avatar">
-                    <img src="assets/images/avatar/image_menu_ava.png" alt="Аватар пользователя">
+    <main class="profile-wrapper">
+        <div class="profile-main-content">
+            <section class="account-card">
+                <div class="account-avatar-side">
+                    <div class="avatar-wrapper">
+                        <img src="assets/images/avatar/image_menu_ava.png" alt="Аватар">
+                        <div class="status-plus">+</div>
+                    </div>
                 </div>
-                <h2 class="profile-nickname"><?php echo htmlspecialchars($_SESSION['user_login']); ?></h2>
-                <div class="profile-actions">
-                    <button class="profile-btn edit-btn">Редактировать</button>
-                    <a href="logout.php" class="profile-btn logout-btn">Выйти</a>
+                <div class="account-info-side">
+                    <h2 class="nickname"><?php echo htmlspecialchars($_SESSION['user_login']); ?></h2>
+                    <p><strong>Краткая информация:</strong> текст текст текст....</p>
+                    <p><strong>Дата регистрации:</strong> <?php echo htmlspecialchars($_SESSION['user_date_registration']); ?></p>
+                    <div class="rating-row">
+                        <span>Оценка:</span>
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-num">5/5</span>
+                    </div>
                 </div>
-            </div>
-
-            <div class="contact-actions">
-                <button class="contact-btn message-btn">Написать сообщение</button>
-                <button class="contact-btn phone-btn">Показать телефон</button>
-            </div>
-
-            <div class="profile-info">
-                <h3>Краткая информация:</h3>
-                <p>Дата регистрации: <span class="info-value"><?php echo htmlspecialchars($_SESSION['user_date_registration']); ?></span></p>
-                <p>Оценка: <span class="info-value"></span></p>
-            </div>
-
-            <div class="blog-info">
-                <h3>Название:</h3>
-                <p>Количество записей: <span class="info-value"></span></p>
-                <p>Оставшиеся антиквариаты: <span class="info-value"></span></p>
-                
-                <div class="blog-actions">
-                    <button class="blog-btn edit-blog-btn">Редактировать информацию в блоге</button>
-                    <button class="blog-btn go-to-blog-btn">Перейти в блог</button>
+                <div class="account-buttons-side">
+                    <button class="btn-beige">Редактировать</button>
+                    <a href="logout.php" class="btn-beige logout">Выйти</a>
+                    <button class="btn-purple">Написать сообщение</button>
+                    <button class="btn-purple">Показать телефон</button>
                 </div>
-            </div>
+            </section>
 
-            <div class="subscriptions">
-                <h3>Подписки</h3>
-                <div class="subscriptions-list">
-                    <div class="subscription-item">Пользователь 1</div>
-                    <div class="subscription-item">Пользователь 2</div>
-                    <div class="subscription-item">Пользователь 3</div>
+            <section class="blog-card-container">
+                <?php
+                $database = new Database();
+                $db = $database->getConnection();
+
+                $id_user = $_SESSION['user_id'];
+
+                $query = "SELECT id, id_user, blog_name, created_date, description, image FROM blogs WHERE id_user = :id_user";
+                $stmt = $db->prepare($query);
+                $stmt->bindParam(":id_user", $id_user);
+                $stmt->execute();
+
+                while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                    echo '<div class="blog-card">';
+                    echo '<img src="' . htmlspecialchars($row['image']) . '" alt="фотография блога">';
+                    echo '<div class="blog-text-details">';
+                    echo '<h3>Название: "' . htmlspecialchars($row['blog_name']) . '"</h3>';
+                    echo '<p>Количество записей: 0</p>';
+                    echo '<p>Оставшиеся антиквариаты: 0</p>';
+                    echo '</div>';
+                    echo '<div class="blog-btns-column">';
+                    echo '<button class="btn-purple">Редактировать информацию в блоге</button>';
+                    echo '<button class="btn-purple">Перейти в блог</button>';
+                    echo '</div>';
+                    echo '</div>';
+                }
+
+                ?>
+                <!-- <div class="blog-card">
+                    <div class="blog-image-placeholder">
+                        <span>фотография блога</span>   
+                    </div>
+                    <div class="blog-text-details">
+                        <h3>Название: "Абракадабра"</h3>
+                        <p>Количество записей: 8</p>
+                        <p>Оставшиеся антиквариаты: 4</p>
+                    </div>
+                    <div class="blog-btns-column">
+                        <button class="btn-purple-light">Редактировать информацию в блоге</button>
+                        <button class="btn-purple-light">Перейти в блог</button>
+                    </div>
                 </div>
-            </div>
+                <div class="blog-card">
+                    <div class="blog-image-placeholder">
+                        <span>фотография блога</span>   
+                    </div>
+                    <div class="blog-text-details">
+                        <h3>Название: "Абракадабра"</h3>
+                        <p>Количество записей: 8</p>
+                        <p>Оставшиеся антиквариаты: 4</p>
+                    </div>
+                    <div class="blog-btns-column">
+                        <button class="btn-purple-light">Редактировать информацию в блоге</button>
+                        <button class="btn-purple-light">Перейти в блог</button>
+                    </div>
+                </div> -->
+            </section>
 
-            <button class="create-blog-btn">Создать новый блог</button>
+            <a href="create_blog.php" class="add-blog-bar">
+                <span class="plus-icon">+</span> Создать новый блог
+            </a>
         </div>
 
-        <!-- Правая колонка - контент -->
-        <div class="profile-content">
-            <div class="content-section">
-                <h3>ТОП-продаж</h3>
-                <div class="items-grid">
-                    <div class="item-card">
-                        <div class="item-image"></div>
-                        <div class="item-info">
-                            <h4>Название, год</h4>
-                            <p class="item-price">Цена</p>
-                            <p class="item-date">Продано: число.месяц.год</p>
-                        </div>
-                    </div>
-                    <div class="item-card">
-                        <div class="item-image"></div>
-                        <div class="item-info">
-                            <h4>Название, год</h4>
-                            <p class="item-price">Цена</p>
-                            <p class="item-date">Продано: число.месяц.год</p>
-                        </div>
-                    </div>
-                    <div class="item-card">
-                        <div class="item-image"></div>
-                        <div class="item-info">
-                            <h4>Название, год</h4>
-                            <p class="item-price">Цена</p>
-                            <p class="item-date">Продано: число.месяц.год</p>
-                        </div>
+        <aside class="subscriptions-sidebar-new">
+            <h3>Подписки</h3>
+            <hr>
+            <div class="sub-list">
+                <div class="sub-card">
+                    <div class="sub-avatar-black">фото блога</div>
+                    <div class="sub-data">
+                        <p><strong>Название:</strong> "Что-то"</p>
+                        <p><strong>Автор:</strong> Дядя Игорь</p>
+                        <p>Оценка: <span class="stars">★★★★☆</span> 10/5</p>
                     </div>
                 </div>
-            </div>
-
-            <div class="content-section">
-                <h3>НОВИНКИ</h3>
-                <div class="activity-list">
-                    <div class="activity-item">
-                        <span class="activity-date">Опубликованно: Тогда-то</span>
-                        <span class="activity-text">Название: Форфоровая кукла</span>
-                    </div>
-                    <div class="activity-item">
-                        <span class="activity-date">Опубликованно: Тогда-то</span>
-                        <span class="activity-text">Название: Еще что-то</span>
-                    </div>
-                    <div class="activity-item">
-                        <span class="activity-date">Опубликованно: Тогда-то</span>
-                        <span class="activity-text">Название: И еще</span>
-                    </div>
                 </div>
-            </div>
-        </div>
+        </aside>
     </main>
 
-    <?php
-    // Подключаем footer
-    include 'model/footer.php';
-    ?>
+    <?php include 'model/footer.php'; ?>
 </body>
 </html>
